@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AVL Tree Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app-container">
+
+    <h1 class="main-title">AVL Tree Visualizer</h1>
+    <p class="subtitle">Animated Self-Balancing BST</p>
+
+    <div class="content">
+
+      <!-- LEFT PANEL -->
+      <div class="panel input-panel">
+        <h2>Input Panel</h2>
+
+        <label>Tree Size</label>
+        <input type="number" id="size" placeholder="e.g. 5">
+
+        <label>Node Values</label>
+        <input type="text" id="values" placeholder="e.g. 22 12 5 23 14">
+
+        <div class="btn-group">
+          <button onclick="buildTree()">Build AVL Tree</button>
+          <button class="reset-btn" onclick="resetTree()">Reset</button>
+        </div>
+
+        <h3>AVL Tree Theory</h3>
+        <ul>
+          <li>AVL Tree is a self-balancing BST.</li>
+          <li>Balance Factor = height(left) − height(right).</li>
+          <li>Allowed values: −1, 0, +1.</li>
+          <li>Guarantees O(log n) search, insert & delete.</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="panel tree-panel">
+        <h2>Visualization</h2>
+        <svg id="tree"></svg>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
